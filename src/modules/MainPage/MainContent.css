@@ -1,16 +1,16 @@
-.description-block, .why-block {
+.description-block, .why-block, .instruction-block {
     width: 100%;
-    height: 400px;
+    height: max-content;
     background-color: rgb(255, 255, 255);
-  }
-  
-.instruction-block {
-    width: 100%;
-    height: 400px;
-    background-color: rgba(204, 204, 204, 0.692);
 }
+
+.description-block, .why-block { background-color: rgb(255, 255, 255); }
+.instruction-block { background-color: rgba(204, 204, 204, 0.692); }
   
-.desc-container { width: 80%; }
+.desc-container {
+    width: 80%;
+    margin: 50px 0px;
+}
   
 .text-header {
     height: 40px;

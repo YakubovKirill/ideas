@@ -1,5 +1,5 @@
 footer {
-    height: 100px;
+    height: max-content;
     width: 100%;
     background-color: rgba(127, 116, 189, 0.945);
     color: rgb(240, 228, 228);
