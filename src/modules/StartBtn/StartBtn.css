@@ -1,0 +1,12 @@
+.content-btn-wrap {
+    margin-top: 25px;
+}
+  
+.content-btn-wrap button {
+    padding: 7px 20px;
+    background-color: #70fb82;
+}
+  
+.content-btn-wrap button:hover {
+    background-color: #60d36f;
+}

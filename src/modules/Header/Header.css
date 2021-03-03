@@ -1,0 +1,38 @@
+header {
+    height: 100px;
+    background-color: rgba(127, 116, 189, 0.945);
+    color: rgb(240, 228, 228);
+}
+.header-container {
+    justify-content: space-between;
+}
+
+header button {
+    background-color: rgba(165, 42, 42, 0);
+    border: 1px solid rgb(240, 228, 228);
+    color: rgb(240, 228, 228);
+}
+  
+header button:hover {
+    background-color: rgb(240, 228, 228);
+    color: rgb(58, 58, 58);
+}
+
+.user {
+    height: 100%;
+    width: max-content;
+    display: none;
+}
+
+.username {
+    margin: 0px 20px;
+    color: rgb(240, 228, 228);
+    font-size: 18px;
+}
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: brown;
+}
