@@ -1,0 +1,85 @@
+.idea-card {
+    width: 300px;
+    height: max-content;
+    max-height: 500px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    background-color: #f3f3f396;
+    box-shadow: 1px 5px 10px #cececef6;
+}
+
+.author-header {
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.auhtor-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: brown;
+    margin: 0px 20px;
+}
+.author-name {
+    font-weight: 600;
+    margin: 4px 0px;
+}
+
+.posted-time {
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+}
+
+.idea-header {
+    font-size: 21px;
+    margin: 10px 20px;
+}
+
+.idea-text {
+    margin-left: 20px;
+    font-size: 15px;
+    color: #847d7de0;
+}
+
+.text-block { overflow: hidden; }
+
+.buttons-block {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.like-btn {
+    width: 50%;
+    height: 100%;
+    min-width: 85px;
+    background-color: #1de81dad;
+    border-bottom-left-radius: 10px;
+}
+
+.dislike-btn {
+    width: 50%;
+    height: 100%;
+    min-width: 85px;
+    background-color: #ff3c3cb8;
+    border-bottom-right-radius: 10px;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+    cursor: pointer;
+    box-shadow: 1px 5px 5px #9e9e9eb4;
+}
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.like-btn p, .dislike-btn p { font-size: 15px;}

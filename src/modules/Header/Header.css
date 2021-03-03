@@ -3,9 +3,9 @@ header {
     background-color: rgba(127, 116, 189, 0.945);
     color: rgb(240, 228, 228);
 }
-.header-container {
-    justify-content: space-between;
-}
+
+header h1 { color: rgb(240, 228, 228); }
+.header-container { justify-content: space-between; }
 
 header button {
     background-color: rgba(165, 42, 42, 0);

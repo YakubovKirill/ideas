@@ -1,0 +1,12 @@
+.content-header {
+    height: 70px;
+    width: 100%;
+}
+
+.filter .text { margin: 10px 20px; }
+.filter .text p { margin: 0; }
+
+.gallery-wrap {
+    width: 600px;
+    height: 600px;
+}
