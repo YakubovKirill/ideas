@@ -2,6 +2,7 @@ import './App.css';
 import Header from './modules/Header/Header'
 import Footer from './modules/Footer/Footer'
 import Ideas from './modules/Ideas/Ideas'
+import InputForm from './modules/InputForm/InputForm'
 import MainContent from './modules/MainPage/MainContent'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ function App() {
           <Switch>
             <Route path='/' exact component={MainContent} />
             <Route path='/ideas' exact component={Ideas} />
+            <Route path='/login' exact component={InputForm} />
           </Switch>
           <Footer />
         </main>

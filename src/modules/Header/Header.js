@@ -1,6 +1,7 @@
 import './Header.css'
 import '../../App.css'
 import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from "react"
 
 function Header(props) {
     return (
@@ -9,7 +10,7 @@ function Header(props) {
                 <div className="element f-c">
                     <Link to='/'><h1>Идея.есть</h1></Link>
                 </div>
-                <button>Вход</button>
+                <Link to='/login'><button>Вход</button></Link>        
             </div>
         </header>
     )
