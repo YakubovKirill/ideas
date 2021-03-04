@@ -2,6 +2,7 @@ import './App.css';
 import Header from './modules/Header/Header'
 import Footer from './modules/Footer/Footer'
 import Ideas from './modules/Ideas/Ideas'
+import Create from './modules/Create/Create'
 import InputForm from './modules/InputForm/InputForm'
 import Register from './modules/Register/Register'
 import MainContent from './modules/MainPage/MainContent'
@@ -50,6 +51,7 @@ function App() {
               <Route path='/ideas' exact component={Ideas} />
               <Route path='/login' exact component={InputForm} />
               <Route path='/register' exact component={Register} />
+              <Route path='/create' exact component={Create} />
             </Switch>
             <Footer />
           </main>

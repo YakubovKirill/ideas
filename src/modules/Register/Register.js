@@ -1,4 +1,3 @@
-import './Register.css'
 import '../InputForm/InputForm.css'
 import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
@@ -13,7 +12,7 @@ function Register(props) {
             {(user) => {
                 const register = (e) => {
                     e.preventDefault()
-                    if ((userName !== '') && (password.length > 4)) {
+                    if ((userName.length > 4) && (password.length > 4)) {
                         user.changeUserStatus()
                         user.changeUserName(userName)
                     } else alert('Неверное имя пользователя или пароль')

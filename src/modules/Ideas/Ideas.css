@@ -30,6 +30,8 @@ select:hover {
 
 select:focus { outline: none;}
 option:hover { cursor: pointer;}
+.add-idea-btn { height: 100px; }
+
 @media screen and (max-width: 670px) {
     .gallery-wrap {width: 310px;}
 }
