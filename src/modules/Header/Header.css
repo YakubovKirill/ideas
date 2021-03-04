@@ -11,6 +11,7 @@ header button {
     background-color: rgba(165, 42, 42, 0);
     border: 1px solid rgb(240, 228, 228);
     color: rgb(240, 228, 228);
+    margin: 0px 5px;
 }
   
 header button:hover {

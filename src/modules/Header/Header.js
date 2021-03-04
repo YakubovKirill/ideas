@@ -15,15 +15,21 @@ function Header(props) {
                         <div className="element f-c">
                             <Link to='/'><h1>Идея.есть</h1></Link>
                         </div>
-                        {(user.isAuth) ? <User /> : <Link to='/login'><button>Вход</button></Link> }
-                             
+                        {(user.isAuth) ? <User /> : <ButtonBlock /> }               
                     </div>
                 </header>
                 )
             }}
-            
         </userInfo.Consumer>
     )
 }
 
+function ButtonBlock() {
+    return (
+        <div className='f-c'>
+            <Link to='/login'><button>Вход</button></Link>
+            <Link to='/register'><button>Регистрация</button></Link>
+        </div>
+    )
+}
 export default Header
