@@ -7,6 +7,29 @@
 .filter .text p { margin: 0; }
 
 .gallery-wrap {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+select {
+    height: 35px;
+    border: none;
+    background-color: #e4e4e4;
+    padding: 0px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: #ececec;
+}
+
+select:focus { outline: none;}
+option:hover { cursor: pointer;}
+@media screen and (max-width: 670px) {
+    .gallery-wrap {width: 310px;}
 }

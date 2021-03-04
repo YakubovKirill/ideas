@@ -19,6 +19,9 @@ function Ideas() {
             <div id="gallery" className="f-c">
                 <div className="gallery-wrap">
                     <IdeaCard />
+                    <IdeaCard />
+                    <IdeaCard />
+                    <IdeaCard />
                 </div>
             </div>
         </div>

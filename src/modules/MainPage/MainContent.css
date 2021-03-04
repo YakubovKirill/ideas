@@ -11,6 +11,8 @@
     width: 80%;
     margin: 50px 0px;
 }
+
+h2 {text-align: center;}
   
 .text-header {
     height: 40px;
@@ -27,4 +29,17 @@
 .text p {
     letter-spacing: 0.03em;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 850px) {
+    .text-header {
+        font-size: 15px;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+    }
 }

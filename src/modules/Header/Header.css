@@ -37,3 +37,23 @@ header button:hover {
     border-radius: 50%;
     background-color: brown;
 }
+
+@media screen and (max-width: 670px) {
+    header { display:block; }
+    header button { font-size: 16px; }
+    .header-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    header h1 {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    header {height: 150px;}
+    header h1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

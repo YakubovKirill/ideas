@@ -56,22 +56,16 @@
 }
 
 .like-btn {
-    width: 50%;
+    width: 100%;
     height: 100%;
     min-width: 85px;
     background-color: #1de81dad;
     border-bottom-left-radius: 10px;
-}
-
-.dislike-btn {
-    width: 50%;
-    height: 100%;
-    min-width: 85px;
-    background-color: #ff3c3cb8;
     border-bottom-right-radius: 10px;
 }
 
-.like-btn:hover, .dislike-btn:hover {
+
+.like-btn:hover{
     cursor: pointer;
     box-shadow: 1px 5px 5px #9e9e9eb4;
 }
@@ -82,4 +76,4 @@
     margin: 0px 10px;
 }
 
-.like-btn p, .dislike-btn p { font-size: 15px;}
+.like-btn p { font-size: 15px;}

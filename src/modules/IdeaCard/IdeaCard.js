@@ -21,10 +21,6 @@ function IdeaCard(props) {
                     <img src="like.svg" alt="like" className="icon-img" />
                     <p>2k</p>
                 </div>
-                <div className="dislike-btn f-c">
-                    <img src="dislike.svg" alt="dislike" className="icon-img" />
-                    <p>100</p>
-                </div>
             </div>
         </div>
     )
