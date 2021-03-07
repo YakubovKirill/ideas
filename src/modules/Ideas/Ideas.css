@@ -5,7 +5,7 @@
 
 .filter .text { margin: 10px 20px; }
 .filter .text p { margin: 0; }
-
+#gallery { margin-top: 20px; }
 .gallery-wrap {
     width: 700px;
     height: max-content;

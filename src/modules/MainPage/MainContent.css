@@ -31,6 +31,8 @@ h2 {text-align: center;}
     margin-top: 10px;
 }
 
+.start-btn-wrap { margin-top: 20px; }
+
 @media screen and (max-width: 850px) {
     .text-header {
         font-size: 15px;

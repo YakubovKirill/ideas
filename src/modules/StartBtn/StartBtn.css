@@ -1,6 +1,7 @@
 .content-btn-wrap button {
     padding: 7px 20px;
     background-color: #70fb82;
+    font-size: 17px;
 }
   
 .content-btn-wrap button:hover {

@@ -2,7 +2,7 @@ import './Header.css'
 import '../../App.css'
 import User from '../User/User'
 import {Link} from 'react-router-dom';
-import React, {useState, useEffect} from "react"
+import React from "react"
 import {userInfo} from '../../user-context'
 
 function Header(props) {
