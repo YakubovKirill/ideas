@@ -9,6 +9,7 @@ import MainContent from './modules/MainPage/MainContent'
 import React, {useState, useEffect} from "react"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {userInfo} from './user-context'
+import CONFIG from '../config'
 
 function App() {
   const [user, setUser] = useState({
