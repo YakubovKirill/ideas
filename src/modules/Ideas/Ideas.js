@@ -4,13 +4,14 @@ import StartBtn from '../StartBtn/StartBtn'
 import {userInfo} from '../../user-context'
 import {useState, useEffect} from "react"
 import Axios from "axios"
+import config from '../../config'
 
 function Ideas() {
     const [ideas, setIdeas] = useState([])
     const [ideasIsFound, setIdeasIsFound] = useState(false)
 
     useEffect(() => {
-        Axios.get('http://localhost:3001/get/ideas', {
+        Axios.get(`${config.getServerPath()}/get/ideas`, {
         }).then((response) => {
             if (response.data.status === 'ok') {
                 setIdeas(response.data.data.ideas)

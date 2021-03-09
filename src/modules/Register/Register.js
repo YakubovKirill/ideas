@@ -3,6 +3,7 @@ import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
 import React, {useState} from "react"
 import Axios from "axios"
+import config from '../../config'
 
 function Register(props) {
     const [userName, setUserName] = useState('')
@@ -16,7 +17,7 @@ function Register(props) {
                     const validUserName = userName.split(' ').join('')
                     if ((userName.length === validUserName.length)
                         && (password.length > 4)) {
-                            Axios.post('http://localhost:3001/register', {
+                            Axios.post(`${config.getServerPath()}/register`, {
                                 userName: userName,
                                 email: email,
                                 password: password

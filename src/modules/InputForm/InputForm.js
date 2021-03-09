@@ -3,6 +3,7 @@ import './InputForm.css'
 import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
 import Axios from "axios"
+import config from '../../config'
 
 function InputForm(props) {
     const [userName, setUserName] = useState('')
@@ -16,7 +17,7 @@ function InputForm(props) {
                     const validUserName = userName.split(' ').join('')
                     if ((userName.length === validUserName.length)
                         && (password.length > 4)) {
-                            Axios.post('http://localhost:3001/login', {
+                            Axios.post(`${config.getServerPath()}/login`, {
                                 userName: userName,
                                 password: password
                             }).then((response) => {

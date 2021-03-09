@@ -1,4 +1,5 @@
 const express = require('express')
+const CONFIG = require('../src/config')
 const app = express()
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
@@ -6,7 +7,7 @@ const cookieParser = require('cookie-parser')
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    origin: [CONFIG.getClientPath()],
     methods: ['GET', 'POST'],
     credentials: true
 }))
@@ -70,6 +71,6 @@ app.get('/get/ideas', (req, res) => {
     return res.send(responseMessage)
 })
 
-app.listen(3001, () => {
-    console.log('listen server 3001')
+app.listen(CONFIG.serverPort, () => {
+    console.log('listen server ' + CONFIG.serverPort)
 })

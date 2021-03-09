@@ -1,8 +1,14 @@
-const CONFIG = {
+module.exports = {
     serverPort: 3001,
-    server: `http://localhost:3001`,
-    client: 'http://localhost:3000',
-    developer: 'Yakubov Kirill'
-}
+    clientPort: 3000,
+    server: 'http://localhost',
+    developer: 'Yakubov Kirill',
 
-export default CONFIG
+    getServerPath: function() {
+        return `${this.server}:${this.serverPort}`
+    },
+
+    getClientPath: function() {
+        return `${this.server}:${this.clientPort}`
+    }
+}

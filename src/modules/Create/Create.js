@@ -3,6 +3,7 @@ import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
 import React, {useState} from "react"
 import Axios from "axios"
+import config from '../../config'
 
 function Create() {
     const [ideaHeader, setIdeaHeader] = useState('')
@@ -14,7 +15,7 @@ function Create() {
                 const create = (e) => {
                     e.preventDefault()
                     const currentDateTime = new Date()
-                    Axios.post('http://localhost:3001/add/post', {
+                    Axios.post(`${config.getServerPath()}/add/post`, {
                         ideaHeader: ideaHeader,
                         ideaText: ideaText,
                         date: currentDateTime
