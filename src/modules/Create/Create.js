@@ -2,6 +2,7 @@ import '../InputForm/InputForm.css'
 import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
 import React, {useState} from "react"
+import Axios from "axios"
 
 function Create() {
     const [ideaHeader, setIdeaHeader] = useState('')
@@ -13,8 +14,18 @@ function Create() {
                 const create = (e) => {
                     e.preventDefault()
                     const currentDateTime = new Date()
-                    setIsCreated(true)
-                    alert('Идея успешно создана')
+                    Axios.post('http://localhost:3001/add/post', {
+                        ideaHeader: ideaHeader,
+                        ideaText: ideaText,
+                        date: currentDateTime
+                    }).then((response) => {
+                        if (response.data.status === 'ok') {
+                            setIsCreated(true)
+                            alert('Идея успешно создана')
+                        } else {
+                            alert('Произошла ошибка, попробуйте позже')
+                        }
+                    })
                 }
 
                 if (isCreated) return <Redirect to={{ pathname: '/ideas' }} />

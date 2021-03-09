@@ -2,8 +2,24 @@ import './Ideas.css'
 import IdeaCard from '../IdeaCard/IdeaCard'
 import StartBtn from '../StartBtn/StartBtn'
 import {userInfo} from '../../user-context'
+import {useState, useEffect} from "react"
+import Axios from "axios"
 
 function Ideas() {
+    const [ideas, setIdeas] = useState([])
+    const [ideasIsFound, setIdeasIsFound] = useState(false)
+
+    useEffect(() => {
+        Axios.get('http://localhost:3001/get/ideas', {
+        }).then((response) => {
+            if (response.data.status === 'ok') {
+                setIdeas(response.data.data.ideas)
+                setIdeasIsFound(true)
+            } else {
+                setIdeasIsFound(true)
+            }
+        })
+    }, [ideasIsFound])
     return (
         <userInfo.Consumer>
             {(user) => {

@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import './InputForm.css'
 import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
+import Axios from "axios"
 
 function InputForm(props) {
     const [userName, setUserName] = useState('')
@@ -12,11 +13,23 @@ function InputForm(props) {
             {(user) => {
                 const login = (e) => {
                     e.preventDefault()
-                    if ((userName !== '') && (password.length > 4)) {
-                        user.changeUserStatus()
-                        user.changeUserName(userName)
-                        
-                    } else alert('Неверное имя пользователя или пароль')
+                    const validUserName = userName.split(' ').join('')
+                    if ((userName.length === validUserName.length)
+                        && (password.length > 4)) {
+                            Axios.post('http://localhost:3001/login', {
+                                userName: userName,
+                                password: password
+                            }).then((response) => {
+                                if (response.data.status === 'ok') {
+                                    user.changeUserStatus()
+                                    user.changeUserName(userName)
+                                } else {
+                                    alert('Неверное имя пользователя или пароль')
+                                }
+                            })
+                    } else {
+                        alert('Имя пользователя не должно содержать пробелы а пароль должен быть длиннее 4 символов')
+                    }
                 }
                 if (user.isAuth) return <Redirect to={{ pathname: '/ideas' }} />
                 return (

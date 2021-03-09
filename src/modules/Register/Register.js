@@ -2,6 +2,7 @@ import '../InputForm/InputForm.css'
 import {userInfo} from '../../user-context'
 import {Redirect} from 'react-router-dom';
 import React, {useState} from "react"
+import Axios from "axios"
 
 function Register(props) {
     const [userName, setUserName] = useState('')
@@ -12,10 +13,25 @@ function Register(props) {
             {(user) => {
                 const register = (e) => {
                     e.preventDefault()
-                    if ((userName.length > 4) && (password.length > 4)) {
-                        user.changeUserStatus()
-                        user.changeUserName(userName)
-                    } else alert('Неверное имя пользователя или пароль')
+                    const validUserName = userName.split(' ').join('')
+                    if ((userName.length === validUserName.length)
+                        && (password.length > 4)) {
+                            Axios.post('http://localhost:3001/register', {
+                                userName: userName,
+                                email: email,
+                                password: password
+                            }).then((response) => {
+                                if (response.data.status === 'ok') {
+                                    alert('Регистрация прошла успешно')
+                                    user.changeUserStatus()
+                                    user.changeUserName(userName)
+                                } else {
+                                    alert('Неверное имя пользователя или пароль')
+                                }
+                            })
+                    } else {
+                        alert('Имя пользователя не должно содержать пробелы а пароль должен быть длиннее 4 символов')
+                    }
                 }
                 if (user.isAuth) return <Redirect to={{ pathname: '/ideas' }} />
                 return (
