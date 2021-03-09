@@ -9,14 +9,29 @@ import MainContent from './modules/MainPage/MainContent'
 import React, {useState, useEffect} from "react"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {userInfo} from './user-context'
+import Axios from "axios"
+import config from './config'
 
 function App() {
+  Axios.defaults.withCredentials = true
   const [user, setUser] = useState({
     userName: 'guest',
     isAuth: false,
     changeUserStatus: () => {},
     changeUserName: () => {}
   })
+
+  useEffect(() => {
+    Axios.get(`${config.getServerPath()}/login`).then((response) => {
+      if (response.data.loggedIn) {
+        setUser((prevState) => ({
+          ...prevState,
+          isAuth: true,
+          userName: response.data.user.userName
+        }))
+      }
+    })
+  }, []) 
 
   useEffect(() => {
     const changeUserStatus = () => {
